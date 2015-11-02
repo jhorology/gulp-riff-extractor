@@ -7,6 +7,8 @@ watch       = require 'gulp-watch'
 beautify    = require 'js-beautify'
 
 
+$ =
+  userContentDir: "#{process.env.HOME}/Documents/Native Instruments/User Content"
   
 gulp.task 'coffeelint', ->
   gulp.src ['./*.coffee', './src/*.coffee']
@@ -38,6 +40,13 @@ gulp.task 'test', [
 gulp.task '_test-default', ['default'], ->
   extract = require './'
   gulp.src ["sample.riff"]
+    .pipe extract
+      form_type: 'NIKS'
+    .pipe gulp.dest './test_out'
+
+gulp.task 'test-multi', ['default'], ->
+  extract = require './'
+  gulp.src ["#{$.userContentDir}/Serum/**/*.nksf"]
     .pipe extract
       form_type: 'NIKS'
     .pipe gulp.dest './test_out'

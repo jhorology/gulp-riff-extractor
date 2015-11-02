@@ -64,9 +64,10 @@ module.exports = (opts) ->
         if opts.padding and data.length & 0x01
           b = new Buffer 1
           contents = Buffer.concat [b, contents]
-
-          
+        test = path.join dirname, filename
         @push new gutil.File
+          base: file.base
+          cwd: file.cwd
           path: path.join dirname, filename
           contents: contents
     , opts.chunk_ids
