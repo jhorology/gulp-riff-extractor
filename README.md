@@ -17,7 +17,7 @@ gulp.task '_test-default', ['default'], ->
   gulp.src ["sample.riff"]
     .pipe extract
       form_type: 'NIKS'
-      .pipe gulp.dest './test_out'
+    .pipe gulp.dest './test_out'
 ```
 
 output:
