@@ -69,6 +69,6 @@ module.exports = (opts) ->
         @push new gutil.File
           path: path.join dirname, filename
           contents: contents
-    , opts.chunl_ids
+    , opts.chunk_ids
     
     cb()
