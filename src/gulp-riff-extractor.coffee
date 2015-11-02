@@ -10,7 +10,7 @@ PLUGIN_NAME = 'gulp-riff-extractor'
 
 module.exports = (opts) ->
   opts = _.defaults opts,
-    form_type: ''
+    form_type: 'NIKS'
     chunk_ids: undefined
     header: off
     padding: off

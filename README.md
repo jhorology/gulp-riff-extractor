@@ -36,7 +36,7 @@ output:
  create new reader instance.
 
 #### options.form_type
-Type: `String`, Required
+Type: `String`, Optional, Default: 'NIKS'
 
 The form type of RIFF file. 4 characters.
 
