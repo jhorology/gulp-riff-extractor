@@ -41,7 +41,7 @@ Type: `String`, Required
 The form type of RIFF file. 4 characters.
 
 #### options.chunk_ids
-Type: array of  `String`
+Type: array of  `String`, Optional, Default: all chunks
 
 The array of chunk id to extract for.
 
@@ -60,7 +60,7 @@ Type: `String`, Optional
 
 Default:
 ```javascript
-    filename_template: "<%= basename %><%= count ? '_' + count : '' %>.<%= id.trim().toLowerCase() %>"
+"<%= basename %><%= count ? '_' + count : '' %>.<%= id.trim().toLowerCase() %>"
 ```
 
 - basename: src filename without extension.
