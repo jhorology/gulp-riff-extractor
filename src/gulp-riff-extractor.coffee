@@ -62,8 +62,8 @@ module.exports = (opts) ->
           
         # append padding byte
         if opts.padding and data.length & 0x01
-          b = new Buffer 1
-          contents = Buffer.concat [b, contents]
+          b = new Buffer [0]
+          contents = Buffer.concat [contents, b]
         test = path.join dirname, filename
         @push new gutil.File
           base: file.base
