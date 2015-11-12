@@ -13,18 +13,17 @@ Gulp plugin for extracting RIFF (Resource Interchange File Format) file's chunks
 
 extract = require 'gulp-riff-extractor'
 
-gulp.task '_test-default', ['default'], ->
+gulp.task 'extract', ->
   gulp.src ["sample.riff"]
     .pipe extract
-      form_type: 'NIKS'
+      chunk_ids: ['NISI', 'NICA']
     .pipe gulp.dest './test_out'
 ```
 
 output:
 ```
   ./test_out/sample.nisi
-  ./test_out/sample.plid
-  ...
+  ./test_out/sample.nica
 ```
 
 
@@ -33,7 +32,6 @@ output:
 ## API
 
 ### extract(options)
- create new reader instance.
 
 #### options.form_type
 Type: `String`, Optional, Default: 'NIKS'

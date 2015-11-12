@@ -43,7 +43,7 @@ module.exports = (opts) ->
         if _.isNumber count[id]
           count[id] += 1
         else
-          count[id] += 0
+          count[id] = 0
           
         # bind template paramaters
         filename = template
