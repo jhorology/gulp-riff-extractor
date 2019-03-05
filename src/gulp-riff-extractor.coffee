@@ -55,14 +55,14 @@ module.exports = (opts) ->
         
         # include header chunk id and size
         if opts.header
-          b = new Buffer 8
+          b = Buffer.alloc 8
           b.write id, 0, 4, 'ascii'
           b.writeUInt32LE data.length, 4
           contents = Buffer.concat [b, contents]
           
         # append padding byte
         if opts.padding and data.length & 0x01
-          b = new Buffer [0]
+          b = Buffer.from [0]
           contents = Buffer.concat [contents, b]
         test = path.join dirname, filename
         @push new gutil.File
