@@ -1,6 +1,6 @@
 {
   "name": "gulp-riff-extractor",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Gulp plugin for extracting RIFF file's chunks.",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "homepage": "https://github.com/jhorology/gulp-riff-extractor#readme",
   "dependencies": {
     "gulp-util": "^3.0.8",
-    "riff-reader": "0.0.8",
+    "riff-reader": "0.0.10",
     "through2": "^3.0.1",
     "underscore": "^1.9.1"
   },
